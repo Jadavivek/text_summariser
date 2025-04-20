@@ -13,7 +13,7 @@ def summarize_text(text):
 cache = {}
 
 GEMINI_API_URL = "https://api.gemini.com/summarize"
-GEMINI_API_KEY = ""
+GEMINI_API_KEY = "GEMINI_API_KEY1"
 
 @app.task
 def summarize_text(text):
@@ -21,7 +21,7 @@ def summarize_text(text):
         return cache[text]
 
     headers = {
-        "Authorization": f"Bearer {GEMINI_API_KEY}",
+        "Authorization": f"Bearer {GEMINI_API_KEY1}",
         "Content-Type": "application/json"
     }
 
