@@ -8,13 +8,13 @@ def summarize_text(text):
 
 cache = {}
 GEMINI_API_URL = "https://api.gemini.com/summarize"
-GEMINI_API_KEY = "AIzaSyCjbPgV1PRpRksTMt0MiW884pRe2bYExtA"
+GEMINI_API_KEY = ""
 
 def summarize_text(text):
     if text in cache:
         return cache[text]
     headers = {
-        "Authorization": f"Bearer {AIzaSyCjbPgV1PRpRksTMt0MiW884pRe2bYExtA}",
+        "Authorization": f"Bearer {}",
         "Content-Type": "application/json"
     }
     response = requests.post(GEMINI_API_URL, json={"text": text}, headers=headers)    
